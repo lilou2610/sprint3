@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercici 1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--link href="css/style.css" rel="stylesheet" />-->
+  </head>
+  <body>
+    <h1>Exercici de Javascript - N1</h1>
+
+    <p id="demo">Exercici 7:</p>
+
+    <script>
+      //1
+      console.log("Hola mundo!");
+      //2
+      alert("Em dic Gemma");
+      //3
+      var nom = "Gemma";
+      var cognom = "Montfort";
+      console.log(nom + " " + cognom);
+      //4
+      var num1 = 3;
+      var num2 = 4;
+      console.log(num1 + num2);
+      //5
+      var nota_examen = prompt("Quina nota has tret?");
+
+      if (nota_examen < 5) {
+        alert("Oh, has suspès");
+      } else {
+        alert("Molt bé! Has aprovat ^_^");
+      }
+
+      //6
+      var frase = "Tinc un cotxe de color blau.";
+      var newfrase = frase.replace("blau", "vert");
+
+      console.log(newfrase);
+
+      //6bis
+      var frase1 = "Tinc un cotxe de color blau.";
+      var refrase = frase1.replace(/o/g, "u");
+
+      console.log(refrase);
+
+      //7
+
+      var set = ["taula", "cadira", "ordinador", "llibreta"];
+      var text = "";
+      var i;
+
+      for (i = 0; i < set.lenght; i++) {
+        text += set[i] + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML =
+        " L'objecte " + set[i] + " està en la posició " + [i] + ".";
+
+      //8
+
+      var operador;
+      var valor1;
+      var valor2;
+      var resultat;
+
+      function calculadora(operador, valor1, valor2) {
+        if (operador == "+") {
+          return valor1 + valor2;
+        } else if (operador == "-") {
+          return valor1 - valor2;
+        } else if (operador == "*") {
+          return valor1 * valor2;
+        } else if (operador == "/") {
+          return valor1 / valor2;
+        }
+      }
+
+      resultat = calculadora("+", 4, 4);
+      console.log(resultat);
+    </script>
+  </body>
+</html>

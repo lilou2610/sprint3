@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link href="css/style.css" rel="stylesheet" />-->
+  </head>
+  <body>
+    <h1>Exercici de Javascript - N2</h1>
+
+    <h4>La mini calculadora</h4>
+
+    <input type="text" id="n1" placeholder="numero 1" />
+    <input type="text" id="n2" placeholder="numero 2" />
+    <select id="operadora">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <button id="calcular" onclick="calculadora()">Calcula!</button>
+
+    <p id="output"></p>
+
+    <script>
+      //N2 - La mini calculadora
+
+      function calculadora(operador, valor1, valor2) {
+        var valor1 = parseInt(document.getElementById("n1").value);
+        var valor2 = parseInt(document.getElementById("n2").value);
+        var operador = document.getElementById("operadora").value;
+        var resultat;
+
+        if (operador == "+") {
+          resultat = valor1 + valor2;
+        } else if (operador == "-") {
+          resultat = valor1 - valor2;
+        } else if (operador == "*") {
+          resultat = valor1 * valor2;
+        } else if (operador == "/") {
+          resultat = valor1 / valor2;
+          if (valor2 == 0) {
+            resultat = isFinite(valor1 / valor2);
+          }
+        }
+        document.getElementById("output").innerHTML =
+          "El resultat és: " + resultat;
+      }
+    </script>
+  </body>
+</html>
